@@ -1,0 +1,129 @@
+% Tex macros by Komei Sugiura
+
+% v15.1 Time-stamp: "2016-03-25 17:14:48 sugiura"
+
+\usepackage{cite}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+%\usepackage{hyperref}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{bm}
+\usepackage{subfigure}
+\usepackage{wrapfig} %図の回り込みを使用
+
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{mathrsfs}
+\RequirePackage{xspace}
+
+% % english
+% \renewcommand{\figurename}{Fig.\,}
+% \renewcommand{\tablename}{Table\,}
+% \newcommand{\secref}[1]{Section \ref{#1}}
+% \renewcommand{\eqref}[1]{Equation (\ref{#1})}
+
+% japanese
+\renewcommand{\figurename}{図\,}
+\renewcommand{\tablename}{表\,}
+\newcommand{\secref}[1]{\ref{#1}節}
+\renewcommand{\eqref}[1]{式(\ref{#1})}
+
+\newcommand{\figref}[1]{\figurename\ref{#1}}
+\newcommand{\tabref}[1]{\tablename\ref{#1}}
+\newcommand{\bracket}[1]{\langle #1 \rangle} 
+\newcommand{\diag}{\mathop{\rm diag}\nolimits} % diagonal items
+\newcommand{\widebar}[1]{\accentset{\rule{0.4em}{0.5pt}}{#1}}
+\newcommand{\R}{\textsf{R}\xspace}
+\renewcommand{\S}{\textsf{S}\xspace}
+\newcommand{\splus}{\textsf{S-Plus}\xspace}
+\renewcommand{\emptyset}{\varnothing}
+\newcommand{\class}[1]{\mathscr{#1}}
+
+\newcommand{\defeq}{\overset{\text{def}}{=}}
+\newcommand{\eqindist}{\overset{\text{d}}{=}}
+\newcommand{\cvginprob}{\overset{P}{\rightarrow}}
+\newcommand{\cvgindist}{\overset{\text{d}}{\longrightarrow}}
+
+\newcommand{\abs}[2][{}]{#1\lvert{#2}#1\rvert}              %Absolute value
+\newcommand{\norm}[2][{}]{#1\lVert{#2}#1\rVert}             %Norm
+\newcommand{\floor}[2][{}]{#1\lfloor{#2}#1\rfloor}          %Floor function
+\newcommand{\ceil}[2][{}]{#1\lceil{#2}#1\rceil}          %Floor function
+
+\newcommand{\sigmafield}{$\sigma$-field\xspace}
+\newcommand{\sfield}{$\sigma$-field\xspace}
+
+\newcommand{\reals}{\mathbb{R}}             %Real numbers
+\newcommand{\rationals}{\mathbb{Q}}         %Rational numbers
+\newcommand{\naturals}{\mathbb{N}}          %Natural numbers
+\newcommand{\integers}{\mathbb{Z}}          %Integers
+
+\newcommand{\borel}{\class{B}}
+\newcommand{\rBorel}[1][{}]{\class{R}^{#1}}
+\newcommand{\xrBorel}[1][{}]{\class{\widebar{R}}^{#1}}
+\newcommand{\rborel}{\class{R}}
+\newcommand{\xrborel}{\class{\widebar{R}}}
+
+\newcommand{\into}{\rightarrow}
+\newcommand{\onto}{\xrightarrow{\text{onto}}}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\newcommand{\svec}[1]{\boldsymbol{#1}}
+\newcommand{\rvec}[3][1]{#2_{#1},\dots,#2_{#3}}
+\newcommand{\rvecp}[3][1]{(#2_{#1},\dots,#2_{#3})}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\smat}[1]{\boldsymbol{#1}}
+
+\newcommand{\st}{\ensuremath{\backepsilon}}
+
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\mse}{MSE}
+\DeclareMathOperator{\rmse}{RMSE}
+\DeclareMathOperator{\ARE}{ARE}
+\DeclareMathOperator{\bias}{Bias}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\Realpart}{Re}
+\DeclareMathOperator*{\Imagpart}{Im}
+
+\newcommand{\xbar}{\widebar{x}}
+\newcommand{\Xbar}{\Bar{X}}
+\newcommand{\ybar}{\widebar{y}}
+\newcommand{\Ybar}{\widebar{Y}}
+\newcommand{\sigmabar}{\widebar{\sigma}}
+\newcommand{\mubar}{\widebar{\mu}}
+\newcommand{\phat}{\Hat{p}}
+\newcommand{\qhat}{\Hat{q}}
+\newcommand{\muhat}{\Hat{\mu}}
+\newcommand{\sigmahat}{\Hat{\sigma}}
+\newcommand{\thetahat}{\Hat\theta}
+\newcommand{\betahat}{\Hat\beta}
+\newcommand{\betahatv}{\Hat{\svec{\beta}}}
+\newcommand{\yhat}{\Hat{y}}
+\newcommand{\Yhat}{\Hat{Y}}
+\newcommand{\sxx}{S_{xx}}
+\newcommand{\syy}{S_{yy}}
+\newcommand{\sxy}{S_{xy}}
+\newcommand{\sse}{\ensuremath{\text{SSE}}}
+\newcommand{\ssreg}{\ensuremath{\text{SSReg}}}
+\newcommand{\df}{\ensuremath{\text{df}}}
+
+\newcommand{\tbigcup}{\mathop{\textstyle\bigcup}}
+\newcommand{\tbigcap}{\mathop{\textstyle\bigcap}}
+\newcommand{\tbiguplus}{\mathop{\textstyle\biguplus}}
+
+\newcommand{\symdiff}{\bigtriangleup}
+
+\newcommand{\ho}{\ensuremath{\text{H}_{0}}}
+\newcommand{\ha}{\ensuremath{\text{H}_{a}}}
+\newcommand{\TS}{\ensuremath{\text{TS}}}
+\newcommand{\RR}{\ensuremath{\text{RR}}}
+\newcommand{\given}{\vert}
+\newcommand{\pval}{\ensuremath{\text{$P$-value}}}

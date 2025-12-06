@@ -1,0 +1,54 @@
+% \begin{table}[b]
+%     \small
+%     \caption{パラメータ設定}
+%     \label{tab:params}
+%     \centering
+%     \begin{tabular}{l l l l}
+%         \hline
+%         Language Encoder & \#L: 12 & \#H: 768 & \#A: 12 \\
+%         \hline
+%         Subgoal History Encoder & \#L: 2 & \#H: 128 & \#A: 8 \\
+%         \hline
+%         Optimizer & \multicolumn{3}{l}{Adam} \\
+%         & \multicolumn{3}{l}{$(\beta_{1}=0.9,\beta_{2}=0.999)$} \\
+%         \hline
+%         Learning rate & \multicolumn{3}{l}{$5\times10^{-5}$} \\
+%         \hline
+%         Epoch & \multicolumn{3}{l}{6} \\
+%         \hline
+%         Batch size & \multicolumn{3}{l}{1} \\
+%         \hline
+%         Loss weight & \multicolumn{3}{l}{1.5} \\
+%         \hline
+%         & \multicolumn{3}{l}{$\alpha=7$} \\
+%         MAT & \multicolumn{3}{l}{$\eta=1\times10^{-3}$} \\
+%         & \multicolumn{3}{l}{$\lambda=1.5$} \\
+%         & \multicolumn{3}{l}{$\rho_{1}=0.9,\rho_{2}=0.999$} \\
+%         \hline
+%     \end{tabular}
+% \end{table}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{table}[t]
+    \centering
+    % \vspace{-6mm}
+    \caption{\small Parameter settings}
+    % \vspace{-2mm}
+    \normalsize
+    \begin{tabular}{|c|l|}
+        \hline
+        Optimizer & $\beta_1=0.9, \beta_2=0.999$ \\ \hline
+        learning rate &  1.0e-4 \\ \hline
+        Batch size & 16 \\ \hline
+        Loss Weights & $\lambda_{CE}=0.9 , \lambda_{NCE}=5$ \\ \hline
+        $N_I, N_e, N_d$ & 2 \\ \hline
+        $N_{knn}$ & 512 \\ \hline
+        $\lambda_{knn}$ & 0.25 \\ \hline
+        Epochs &  30 \\ \hline
+        % input N size &  downscaled to $(224 \times 224 \times 3)$ \\ \hline
+        % Batch size & 16 \\ \hline
+    \end{tabular}
+    \label{tab:params}
+    % \vspace{-6mm}
+\end{table}
+\renewcommand{\arraystretch}{1.0}

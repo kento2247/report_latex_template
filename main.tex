@@ -1,0 +1,48 @@
+\documentclass[twocolumn,dvipdfmx]{jarticle}
+
+\usepackage{jsaiac}
+\usepackage{mymacros}
+\usepackage{cite}
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}{>{\raggedleft\arraybackslash}X}
+
+% 追加
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{listings}
+
+\definecolor{lightblue}{RGB}{242,242,254}
+\lstset{
+  backgroundcolor=\color{lightblue}, % 薄い青
+  frame=single,
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  breakindent=0pt,
+  breakautoindent=false
+}
+
+%%
+\title{
+\jtitle{SIGAIs 2025 聴講レポート}
+}
+
+\affiliate{}
+
+\author{
+\jname{学籍番号: 82518829 氏名: 戸倉~健登}
+}
+
+\begin{document}
+\setlength{\abovedisplayskip}{3pt}
+
+\maketitle
+
+\input{section1}
+\input{section2}
+\input{section3}
+
+\end{document}
