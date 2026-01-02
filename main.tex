@@ -14,6 +14,14 @@
 \usepackage{tcolorbox}
 \usepackage{amsmath}
 \usepackage{listings}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% 行間を広げる（1.2倍）
+\setstretch{1.2}
+
+% subsectionの前後にスペースを追加
+\titlespacing*{\subsection}{0pt}{1.5em}{0.75em}
 
 \definecolor{lightblue}{RGB}{242,242,254}
 \lstset{
@@ -27,7 +35,7 @@
 
 %%
 \title{
-\jtitle{SIGAIs 2025 聴講レポート}
+\jtitle{人工知能と複雑ネットワーク 第11・12回課題}
 }
 
 \affiliate{}
@@ -42,7 +50,8 @@
 \maketitle
 
 \input{section1}
+\clearpage
 \input{section2}
-\input{section3}
+% \input{section3}
 
 \end{document}
